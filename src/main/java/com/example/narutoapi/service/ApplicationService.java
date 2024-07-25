@@ -22,4 +22,8 @@ public class ApplicationService {
     public String listAllCharacters(){
         return getApiData("https://dattebayo-api.onrender.com/characters");
     }
+
+    public String listCharacterById(int id){
+        return getApiData("https://dattebayo-api.onrender.com/characters/" + id);
+    }
 }
