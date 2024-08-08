@@ -1,5 +1,6 @@
 package com.example.narutoapi.controller;
 
+import com.example.narutoapi.model.CharacterModel;
 import com.example.narutoapi.service.ApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,7 @@ public class Controller {
     }
 
     @GetMapping("/characters/{id}")
-    public String listById(@PathVariable int id){
+    public CharacterModel listById(@PathVariable int id){
         return applicationService.listCharacterById(id);
     }
 }
